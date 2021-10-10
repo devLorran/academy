@@ -1,0 +1,107 @@
+@charset "ISO-8859-1";
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	box-sizing: border-box;
+}
+nav{
+	height:90px;
+	
+}
+.nav{
+	background-color: #1e1f28;
+	color:#6272a4;
+	text-transform: uppercase;
+}
+nav a{
+	cursor:pointer;
+}
+img{
+	width:90px;
+	display: flex;
+    align-items: center;
+}
+.neo-section{
+	min-height:700px;
+	width:100%;
+	padding:30px;
+	position:relative;
+}
+.wm{
+	width: 50%;
+	float:left;
+}
+.neo-container{
+	max-width:1280px;
+	padding: 2% 2%;
+	margin: 0 auto;
+	margin-top:200px;
+}
+.clear{
+	clear:both;
+}
+.sombra{
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	position: absolute;
+	background: rgba(0,0,0,0.7);
+	z-index:100;
+}
+.neo-section > .neo-container{
+	position: relative;
+	z-index:105;
+}
+.texto-centro{
+	color:#6272a4;
+	font-size: 3em;
+	font-family: 'Arial' 'Sans Serif' 'Heveltica';
+	font-weight: bold;
+}
+.button{
+	width:260px;
+	color: #ffffff;
+	border-radius: 10px;
+	border: 3px solid #6272a4;
+	text-align:center;
+	padding:20px;
+}
+.btn{
+	color: #a798cd;
+}
+.button:hover{
+	background-color: #6272a4;
+}
+.btn:hover{
+	border-bottom: 2px solid #a798cd;
+}
+#lorran{
+	color:#a798cd;
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 667px){
+	.wm{
+		width:100%;
+	}
+	.texto-centro{
+		font-size: 2em;
+	}
+	.neo-section{
+		width: 100%;
+    	height: 100%;
+	}
+	nav{
+		height:100%;
+	}
+	.neo-container{
+		margin-top:120px;
+	}
+}
+
+
+
+

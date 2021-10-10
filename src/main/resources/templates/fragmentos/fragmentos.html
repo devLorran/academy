@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/indexCss.css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+<title>Home</title>
+<meta name="author" content="LorranCode"/>
+</head>
+<body>
+	<header th:fragment="cabecalho">
+		<nav class="nav navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand" th:href="@{/}">
+				<img src="img/logo-lorranCode-120x120-branco.png"/>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+				<div id="navMobile" class="navbar-collapse collapse justify-content-end">
+					<a id="lorran" class="nav-item nav-link btn" th:href="@{/}"><i class="fas fa-home"></i> Home</a>
+					<a id="lorran" class="nav-item nav-link btn" th:href="@{registration}"><i class="fas fa-user-graduate"></i> Cadastrar Aluno</a>
+					<a id="lorran" class="nav-item nav-link btn"><i class="fas fa-search"></i> Pesquisar Aluno</a>
+					<a id="lorran" class="nav-item nav-link btn"><i class="fas fa-times"></i> Sair</a>
+				</div>
+		</nav>
+	</header>
+	
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

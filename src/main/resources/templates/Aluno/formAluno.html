@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/indexCss.css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+<title>Home</title>
+<meta name="author" content="LorranCode"/>
+<title>Cadastrar</title>
+</head>
+<body>
+	<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+	<div class="container">
+		<h2><i class="fas fa-address-card"></i> Cadastrar</h2>
+		<form method="post" action="/registration" th:object="${aluno}">
+			<div class="row">
+				<div class="col-md-6 form-group offset-md-3">
+					<label>Nome:</label>
+					<input type="text" placeholder="Ex: Lorran Antonio Rodrigues" th:field="*{nome}" class="form-control"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 form-group offset-md-3">
+					<label>Selecione o Curso:</label>
+					<select class="form-control">
+						<option th:each="curso : ${T(br.com.academy.Enums.Curso).values()}" th:value="${curso}" th:text="${curso}"></option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 form-group offset-md-3">
+					<label>Matrícula:</label>
+					<input type="text" id="matricula" class="form-control" readonly th:field="*{matricula}"/>
+					<button type="button" onclick="GerarMatricula();" class="btn btn-dark" style="margin-top:5px;">Gerar</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 form-group offset-md-3">
+					<label>Status:</label>
+					<select class="form-control">
+						<option th:each="status : ${T (br.com.academy.Enums.Status).values()}" th:value="${status}" th:text="${status}"></option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 form-group offset-md-3">
+					<button type="submit" class="btn btn-success">SALVAR</button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn btn-outline-warning">VOLTAR</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="js/main.js"></script>
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
